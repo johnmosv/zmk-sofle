@@ -38,6 +38,107 @@
     };
 
     behaviors {
+        // Unicode macro for å (lowercase)
+        aa_lower: aa_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp E &kp KP_N5>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        // Unicode macro for Å (uppercase)
+        aa_upper: aa_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp C &kp KP_N5>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        // Unicode macro for ä (lowercase)
+        ae_lower: ae_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp E &kp KP_N4>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        // Unicode macro for Ä (uppercase)
+        ae_upper: ae_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp C &kp KP_N4>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        // Unicode macro for ö (lowercase)
+        oe_lower: oe_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp F &kp KP_N6>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        // Unicode macro for Ö (uppercase)
+        oe_upper: oe_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp D &kp KP_N6>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        // Mod-morph for å/Å
+        aa_morph: aa_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&aa_lower>, <&aa_upper>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Mod-morph for ä/Ä
+        ae_morph: ae_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&ae_lower>, <&ae_upper>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Mod-morph for ö/Ö
+        oe_morph: oe_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&oe_lower>, <&oe_upper>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -80,9 +181,9 @@
 
         layer_2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &aa_morph    &trans
 &trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
+&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &oe_morph    &ae_morph
 &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
