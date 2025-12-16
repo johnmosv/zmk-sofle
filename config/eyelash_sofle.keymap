@@ -38,6 +38,34 @@
     };
 
     behaviors {
+        // Home row mods - right hand
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <240>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 13 14 15 16 17 18 19 26 27 28 29 30 31 32 39 40 41 42 43 44 45 52 53 54 55 56 57 58>;
+            require-prior-idle-ms = <100>;
+        };
+
+        // Home row mods - left hand
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <240>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <7 8 9 10 11 12 20 21 22 23 24 25 33 34 35 36 37 38 46 47 48 49 50 51 59 60 61 62 63 64>;
+            require-prior-idle-ms = <100>;
+        };
+
         // Unicode macro for å (lowercase)
         aa_lower: aa_lower {
             compatible = "zmk,behavior-macro";
@@ -155,11 +183,11 @@
 
         layer0 {
             bindings = <
-&kp GRAVE         &kp N1  &kp N2           &kp N3           &kp N4             &kp N5                                 &kp N6              &kp N7                  &kp N8                  &kp N9                 &kp N0    &kp LBKT  &kp BSPC
-&mt LEFT_ALT TAB  &kp Q   &kp W            &kp E            &kp R              &lt 3 T    &kp UP_ARROW              &kp Y               &kp U                   &kp I                   &kp O                  &kp P     &kp BSLH  &kp BSPC
-&kp ESC           &kp A   &hmr LEFT_ALT S  &hmr LEFT_GUI D  &hmr LEFT_SHIFT F  &kp G      &kp DOWN_ARROW            &kp H               &kp J                   &kp K                   &kp L                  &kp SEMI  &kp SQT   &kp SQT
-&kp LSHFT         &kp Z   &kp X            &kp C            &kp V              &kp B      &kp C_MUTE                &hml RIGHT_SHIFT N  &hml RIGHT_SHIFT M      &hml RIGHT_GUI COMMA    &hml RIGHT_ALT PERIOD  &kp FSLH  &kp RSHFT &kp RSHFT
-&kp C_MUTE        &trans  &kp LALT         &kp LEFT_COMMAND &mo 2              &kp LCTRL  &mt RALT SPACE            &kp SPACE           &mo 1                   &mt RIGHT_SHIFT RETURN  &kp RGUI               &kp DELETE
+&kp GRAVE         &kp N1  &kp N2           &kp N3           &kp N4             &kp N5     &kp UP_ARROW              &kp N6              &kp N7                  &kp N8                &kp N9                 &kp N0    &kp BSPC
+&mt LEFT_ALT TAB  &kp Q   &kp W            &kp E            &kp R              &lt 3 T    &kp DOWN_ARROW            &kp Y               &kp U                   &kp I                 &kp O                  &kp P     &kp BSLH
+&kp ESC           &kp A   &hmr LEFT_ALT S  &hmr LEFT_GUI D  &hmr LEFT_SHIFT F  &kp G      &kp LEFT_ARROW            &kp H               &hml LEFT_SHIFT J       &hml LEFT_GUI K       &hml LEFT_ALT L        &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z   &kp X            &kp C            &kp V              &kp B      &kp RIGHT_ARROW           &kp N               &kp M                   &kp COMMA             &kp PERIOD             &kp FSLH  &kp RSHFT
+&kp C_MUTE        &trans  &kp LALT         &kp LEFT_COMMAND &mo 2              &kp LCTRL  &mt RALT SPACE            &kp SPACE           &mo 1                   &mt RIGHT_SHIFT RETURN  &kp RGUI             &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
