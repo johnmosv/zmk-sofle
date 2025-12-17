@@ -66,7 +66,7 @@
             require-prior-idle-ms = <100>;
         };
 
-        // Unicode macro for å (lowercase)
+        // Unicode macro for å (lowercase) - macOS Unicode Hex Input
         aa_lower: aa_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -74,12 +74,12 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N0 &kp E &kp KP_N5>,
+                <&kp N0 &kp N0 &kp E &kp N5>,
                 <&macro_release>,
                 <&kp LALT>;
         };
 
-        // Unicode macro for Å (uppercase)
+        // Unicode macro for Å (uppercase) - macOS Unicode Hex Input
         aa_upper: aa_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -87,12 +87,12 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N0 &kp C &kp KP_N5>,
+                <&kp N0 &kp N0 &kp C &kp N5>,
                 <&macro_release>,
                 <&kp LALT>;
         };
 
-        // Unicode macro for ä (lowercase)
+        // Unicode macro for ä (lowercase) - macOS Unicode Hex Input
         ae_lower: ae_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -100,12 +100,12 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N0 &kp E &kp KP_N4>,
+                <&kp N0 &kp N0 &kp E &kp N4>,
                 <&macro_release>,
                 <&kp LALT>;
         };
 
-        // Unicode macro for Ä (uppercase)
+        // Unicode macro for Ä (uppercase) - macOS Unicode Hex Input
         ae_upper: ae_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -113,12 +113,12 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N0 &kp C &kp KP_N4>,
+                <&kp N0 &kp N0 &kp C &kp N4>,
                 <&macro_release>,
                 <&kp LALT>;
         };
 
-        // Unicode macro for ö (lowercase)
+        // Unicode macro for ö (lowercase) - macOS Unicode Hex Input
         oe_lower: oe_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -126,12 +126,12 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N0 &kp F &kp KP_N6>,
+                <&kp N0 &kp N0 &kp F &kp N6>,
                 <&macro_release>,
                 <&kp LALT>;
         };
 
-        // Unicode macro for Ö (uppercase)
+        // Unicode macro for Ö (uppercase) - macOS Unicode Hex Input
         oe_upper: oe_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -139,7 +139,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N0 &kp D &kp KP_N6>,
+                <&kp N0 &kp N0 &kp D &kp N6>,
                 <&macro_release>,
                 <&kp LALT>;
         };
