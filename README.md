@@ -1,4 +1,13 @@
 
+# Github CLI
+
+- Push changes
+- `gh run watch` to view process
+- `gh run list`
+- `gh run view`
+when done, if succesful
+- `gh run download` to download the latest firmware.
+
 # Update List
 
 2024/12/21
