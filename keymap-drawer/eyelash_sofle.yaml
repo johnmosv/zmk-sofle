@@ -60,7 +60,7 @@ layers:
   - raise
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
+  - $$mdi:keyboard-space$$
   - lower
   - {t: RETURN, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: RGUI, h: '$$mdi:backspace$$'}
