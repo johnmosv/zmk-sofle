@@ -73,6 +73,8 @@
         aa_lower: aa_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -87,6 +89,8 @@
         aa_upper: aa_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -101,6 +105,8 @@
         ae_lower: ae_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -115,6 +121,8 @@
         ae_upper: ae_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -129,6 +137,8 @@
         oe_lower: oe_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -143,6 +153,8 @@
         oe_upper: oe_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,

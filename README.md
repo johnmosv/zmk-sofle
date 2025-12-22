@@ -7,6 +7,7 @@
 - `gh run view`
 when done, if succesful
 - `gh run download` to download the latest firmware.
+    - or `gh run download --dir ./firmware`
 
 # Update List
 
