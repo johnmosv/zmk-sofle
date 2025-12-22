@@ -13,7 +13,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
   - Q
   - W
@@ -26,7 +26,7 @@ layers:
   - I
   - O
   - P
-  - {t: \, s: '|'}
+  - {t: '[', s: '{'}
   - $$mdi:keyboard-esc$$
   - A
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -60,10 +60,10 @@ layers:
   - raise
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
+  - $$mdi:keyboard-space$$
   - lower
   - {t: RETURN, h: '$$mdi:apple-keyboard-shift$$'}
-  - RGUI
+  - {t: RGUI, h: '$$mdi:backspace$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   lower:
   - {t: '$$mdi:transfer$$', type: trans}
