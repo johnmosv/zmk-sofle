@@ -41,12 +41,11 @@
         aa_lower: aa_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
+            wait-ms = <40>;
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
-                <&macro_pause_for_release>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp E &kp N5>,
                 <&macro_release>,
@@ -58,12 +57,11 @@
         aa_upper: aa_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
+            wait-ms = <40>;
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
-                <&macro_pause_for_release>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp C &kp N5>,
                 <&macro_release>,
@@ -75,12 +73,11 @@
         ae_lower: ae_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
+            wait-ms = <40>;
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
-                <&macro_pause_for_release>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp E &kp N4>,
                 <&macro_release>,
@@ -92,12 +89,11 @@
         ae_upper: ae_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
+            wait-ms = <40>;
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
-                <&macro_pause_for_release>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp C &kp N4>,
                 <&macro_release>,
@@ -109,12 +105,11 @@
         oe_lower: oe_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
+            wait-ms = <40>;
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
-                <&macro_pause_for_release>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp F &kp N6>,
                 <&macro_release>,
@@ -126,12 +121,11 @@
         oe_upper: oe_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
+            wait-ms = <40>;
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
-                <&macro_pause_for_release>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp D &kp N6>,
                 <&macro_release>,
