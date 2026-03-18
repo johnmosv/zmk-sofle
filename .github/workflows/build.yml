@@ -7,5 +7,7 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # Pin workflow to pre-Zephyr 4.1 version (Dec 6, 2025)
+    # Matches ZMK version pinned in config/west.yml
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@83eafcbf9b12226f1d0dbb30a77e6ddc332a4210
 
