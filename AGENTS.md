@@ -225,3 +225,47 @@ Enabled via `CONFIG_ZMK_POINTING=y`. Behaviors:
 - **Battery safety** - Monitor power draw; excessive RGB/backlight drains batteries
 - **ZMK Studio compatibility** - Only works on left side with specific build flags
 - **Physical layout** - 60 keys + 1 encoder (left side), 60 keys (right side)
+
+## Maintenance Tasks
+
+### Board Repository Compatibility Monitoring
+
+**Current Status (March 17, 2026):**
+- External board repository pinned to commit `59a9f80072ada5c72818f6d22ccbdc0bd1436278` (Dec 27, 2025)
+- Reason: March 2026 upstream updates introduced `KeyError: 'qualifiers'` build failures
+- Root cause: Board repository changes incompatible with ZMK's Zephyr 4.1 requirements
+
+**Monthly Check Procedure:**
+
+Perform this check on the 17th of each month:
+
+1. **Check upstream board repository:**
+   ```bash
+   # Visit: https://github.com/a741725193/zmk-sofle/commits/main
+   # Look for commits mentioning "Zephyr 4.1" or "compatibility"
+   ```
+
+2. **Test potential update:**
+   ```bash
+   # Edit config/west.yml, change revision to latest commit hash
+   git add config/west.yml
+   git commit -m "Test: Update board repo to [commit-hash]"
+   git push
+   gh run watch  # Monitor build
+   ```
+
+3. **If build succeeds:**
+   - Update `config/west.yml` revision to new commit hash
+   - Update "Last checked" date in `west.yml` comments
+   - Update this section's "Current Status" date
+   - Test firmware on hardware (especially Swedish character macros)
+
+4. **If build fails:**
+   - Revert the test commit: `git revert HEAD && git push`
+   - Keep existing pinned version
+   - Update "Last checked" date in this section only
+   - Try again next month
+
+**Next check due:** April 17, 2026
+
+**Maintenance owner:** To be assigned

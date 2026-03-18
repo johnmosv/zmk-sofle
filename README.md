@@ -28,4 +28,15 @@ The GIF animations on the right-hand keyboard screen have been removed, which wi
 # Sofle Keymap
 <img width="1004" height="1997" alt="image" src="https://github.com/user-attachments/assets/e96a967c-50e7-453f-8ba6-d0a265de2a26" />
 
+## Known Issues
+
+**Board Repository Pinned (March 2026):**
+- The external board repository (`a741725193/zmk-sofle`) is currently pinned to commit `59a9f80` (Dec 27, 2025)
+- Reason: March 2026 upstream updates introduced build failures (`KeyError: 'qualifiers'`) due to Zephyr 4.1 incompatibilities
+- Impact: None on firmware functionality - all features work as expected
+- Maintenance: Monthly checks scheduled to test for upstream compatibility fixes (see `AGENTS.md` for details)
+- Ownership: To be assigned
+
+This is a temporary workaround until the upstream board repository is updated for full Zephyr 4.1 support.
+
 
