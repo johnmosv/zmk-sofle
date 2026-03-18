@@ -228,44 +228,45 @@ Enabled via `CONFIG_ZMK_POINTING=y`. Behaviors:
 
 ## Maintenance Tasks
 
-### Board Repository Compatibility Monitoring
+### ZMK Zephyr 4.1 Compatibility Monitoring
 
-**Current Status (March 17, 2026):**
-- External board repository pinned to commit `59a9f80072ada5c72818f6d22ccbdc0bd1436278` (Dec 27, 2025)
-- Reason: March 2026 upstream updates introduced `KeyError: 'qualifiers'` build failures
-- Root cause: Board repository changes incompatible with ZMK's Zephyr 4.1 requirements
+**Current Status (March 18, 2026):**
+- ZMK pinned to commit `83eafcbf9b12226f1d0dbb30a77e6ddc332a4210` (Dec 6, 2025 - pre-Zephyr 4.1)
+- Reason: External board repository (`a741725193/zmk-sofle`) hasn't been updated for Zephyr 4.1 board variant requirements
+- Root cause: ZMK upgraded to Zephyr 4.1 on Dec 10, 2025, requiring board-specific ZMK variants that the external board repo doesn't provide
 
 **Monthly Check Procedure:**
 
-Perform this check on the 17th of each month:
+Perform this check on the 18th of each month:
 
-1. **Check upstream board repository:**
+1. **Check upstream board repository for Zephyr 4.1 support:**
    ```bash
    # Visit: https://github.com/a741725193/zmk-sofle/commits/main
-   # Look for commits mentioning "Zephyr 4.1" or "compatibility"
+   # Look for commits mentioning "Zephyr 4.1", "board variant", or "zmk_board"
    ```
 
-2. **Test potential update:**
+2. **Test ZMK upgrade to latest:**
    ```bash
-   # Edit config/west.yml, change revision to latest commit hash
+   # Edit config/west.yml, change ZMK revision to: main
+   # (Keep board repo at revision: main)
    git add config/west.yml
-   git commit -m "Test: Update board repo to [commit-hash]"
+   git commit -m "Test: Upgrade ZMK to latest for Zephyr 4.1 compatibility"
    git push
    gh run watch  # Monitor build
    ```
 
 3. **If build succeeds:**
-   - Update `config/west.yml` revision to new commit hash
+   - Update `config/west.yml` ZMK revision to `main` or latest stable
    - Update "Last checked" date in `west.yml` comments
    - Update this section's "Current Status" date
-   - Test firmware on hardware (especially Swedish character macros)
+   - Test firmware on hardware (especially Swedish character macros, ZMK Studio)
 
-4. **If build fails:**
+4. **If build fails with "Missing ZMK Compat" or "KeyError: 'qualifiers'":**
    - Revert the test commit: `git revert HEAD && git push`
-   - Keep existing pinned version
+   - Keep existing pinned ZMK version
    - Update "Last checked" date in this section only
    - Try again next month
 
-**Next check due:** April 17, 2026
+**Next check due:** April 18, 2026
 
 **Maintenance owner:** To be assigned

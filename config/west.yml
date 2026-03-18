@@ -12,16 +12,16 @@ manifest:
    # - name: mario-peripheral-animation
    #   remote: gpeye
    #    revision: main 
-    # NOTE: Board repository pinned to Dec 27, 2025 version due to compatibility issues
-    # TODO: Check https://github.com/a741725193/zmk-sofle monthly for Zephyr 4.1 updates
-    # When upstream board repo is updated for full Zephyr 4.1 support, update this revision
-    # Last checked: March 17, 2026
     - name: eyelash_sofle
       url: https://github.com/a741725193/zmk-sofle
-      revision: 59a9f80072ada5c72818f6d22ccbdc0bd1436278  # Dec 27, 2025 - last working version
+      revision: main
+    # NOTE: ZMK pinned to Dec 6, 2025 (pre-Zephyr 4.1) for compatibility
+    # External board repository hasn't been updated for Zephyr 4.1 board variants yet
+    # TODO: Monitor for board repo Zephyr 4.1 updates, then upgrade ZMK to latest
+    # Last checked: March 18, 2026
     - name: zmk
       remote: zmkfirmware
-      revision: abb64ba316c29caddc49727ca2cac2f0ed5970c7
+      revision: 83eafcbf9b12226f1d0dbb30a77e6ddc332a4210  # Dec 6, 2025 - pre-Zephyr 4.1
       import: app/west.yml
   self:
     path: boards

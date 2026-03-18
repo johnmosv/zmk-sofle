@@ -30,13 +30,14 @@ The GIF animations on the right-hand keyboard screen have been removed, which wi
 
 ## Known Issues
 
-**Board Repository Pinned (March 2026):**
-- The external board repository (`a741725193/zmk-sofle`) is currently pinned to commit `59a9f80` (Dec 27, 2025)
-- Reason: March 2026 upstream updates introduced build failures (`KeyError: 'qualifiers'`) due to Zephyr 4.1 incompatibilities
-- Impact: None on firmware functionality - all features work as expected
-- Maintenance: Monthly checks scheduled to test for upstream compatibility fixes (see `AGENTS.md` for details)
+**ZMK Version Pinned (March 2026):**
+- ZMK is currently pinned to commit `83eafcbf` (Dec 6, 2025) - the last version before Zephyr 4.1 upgrade
+- Reason: ZMK upgraded to Zephyr 4.1 on Dec 10, 2025, requiring board-specific ZMK variants
+- Impact: Missing latest ZMK features (released after Dec 6, 2025), but all current features work perfectly
+- Root cause: External board repository (`a741725193/zmk-sofle`) hasn't been updated for Zephyr 4.1 compatibility
+- Maintenance: Monthly checks scheduled to test for upstream board repo updates (see `AGENTS.md` for details)
 - Ownership: To be assigned
 
-This is a temporary workaround until the upstream board repository is updated for full Zephyr 4.1 support.
+This is a temporary workaround until the upstream board repository is updated with Zephyr 4.1 board variant support.
 
 
