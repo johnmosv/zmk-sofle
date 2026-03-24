@@ -36,100 +36,124 @@
     };
 
     behaviors {
-        // Unicode macro for å (lowercase) - macOS Unicode Hex Input
+        // Dead key macro for å (lowercase) - macOS US Extended keyboard
 
         aa_lower: aa_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N5>,
+                <&kp A>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp A>;
         };
 
-        // Unicode macro for Å (uppercase) - macOS Unicode Hex Input
+        // Dead key macro for Å (uppercase) - macOS US Extended keyboard
 
         aa_upper: aa_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N5>,
+                <&kp A>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LALT>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
 
-        // Unicode macro for ä (lowercase) - macOS Unicode Hex Input
+        // Dead key macro for ä (lowercase) - macOS US Extended keyboard
 
         ae_lower: ae_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N0 &kp E &kp N4>,
+                <&kp U>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp A>;
         };
 
-        // Unicode macro for Ä (uppercase) - macOS Unicode Hex Input
+        // Dead key macro for Ä (uppercase) - macOS US Extended keyboard
 
         ae_upper: ae_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N0 &kp C &kp N4>,
+                <&kp U>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LALT>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
 
-        // Unicode macro for ö (lowercase) - macOS Unicode Hex Input
+        // Dead key macro for ö (lowercase) - macOS US Extended keyboard
 
         oe_lower: oe_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N0 &kp F &kp N6>,
+                <&kp U>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp O>;
         };
 
-        // Unicode macro for Ö (uppercase) - macOS Unicode Hex Input
+        // Dead key macro for Ö (uppercase) - macOS US Extended keyboard
 
         oe_upper: oe_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N0 &kp D &kp N6>,
+                <&kp U>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LALT>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp O>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
 
         // Mod-morph for å/Å
