@@ -63,8 +63,8 @@ layers:
   - $$mdi:keyboard-space$$
   - lower
   - {t: RETURN, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:backspace$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-option$$
   lower:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
