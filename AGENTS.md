@@ -182,10 +182,10 @@ CONFIG_NUMERIC_OPTION=3600000  # Numeric values
 ## Special Features
 
 ### Swedish Character Macros
-Requires macOS Unicode Hex Input method enabled:
-- `&aa_lower` / `&aa_upper`: å/Å (U+00E5/U+00C5)
-- `&ae_lower` / `&ae_upper`: ä/Ä (U+00E4/U+00C4)
-- `&oe_lower` / `&oe_upper`: ö/Ö (U+00F6/U+00D6)
+Requires macOS U.S. International - PC keyboard layout:
+- `&aa_lower` / `&aa_upper`: å/Å (Option+A / Option+Shift+A)
+- `&ae_lower` / `&ae_upper`: ä/Ä (Option+U dead key, then A/Shift+A)
+- `&oe_lower` / `&oe_upper`: ö/Ö (Option+U dead key, then O/Shift+O)
 
 ### Soft-Off Combo
 Press Q+S+Z simultaneously for 2 seconds to enter deep sleep. Wake via reset button.
