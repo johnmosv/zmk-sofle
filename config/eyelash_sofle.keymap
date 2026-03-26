@@ -45,11 +45,13 @@
             tap-ms = <10>;
             bindings =
                 <&macro_press>,
-                <&kp LALT &kp LSHFT>,
+                <&kp LALT>,
+                <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp A>,
                 <&macro_release>,
-                <&kp LSHFT &kp LALT>,
+                <&kp LSHFT>,
+                <&kp LALT>,
                 <&macro_tap>,
                 <&kp A>;
         };
@@ -63,7 +65,8 @@
             tap-ms = <10>;
             bindings =
                 <&macro_press>,
-                <&kp LALT &kp LSHFT>,
+                <&kp LALT>,
+                <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp A>,
                 <&macro_release>,
